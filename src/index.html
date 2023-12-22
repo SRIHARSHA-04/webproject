@@ -1,17 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/natgeo.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        h2 {
+            color: white;
+            font-weight: 20000;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        body {
+            background-image: url('images/glacier.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background: transparent 15;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        .navbar {
+            z-index: 1; 
+        }
+
+        .sidebar {
+            width: 300px;
+            background: transparent;
+            
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 150px; 
+            bottom: 0;
+            overflow-y: auto;
+            transition: 0.2s; 
+        }
+
+        .content {
+            margin-right: 320px; /* Adjust the margin based on the sidebar width */
+            padding: 100px;
+            transition: margin-right 0.5s;
+            color: black; /* Smooth transition */
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
-
 <body>
-  <main>
-    <h1>my project</h1>
-  </main>
-</body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/ng-logo-2fl.png.webp"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="action.html">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Watch TV</a></li>
+                            <li><a class="dropdown-item" href="#">Read magazine</a></li>
+                            <li><a class="dropdown-item" href="#">Book a trip</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Support our mission</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
+    <h2>TRAVEL</h2>
+    <div class="content">
+        <div class="card" style="width: 36rem;">
+            <img src="images/bhutan-mysticism-mythology-hero.jpg.adapt.nineteen-hundred.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-text">New wonders to discover</h5>
+            </div>
+        </div>
+          <div style="display: flex;">
+        <div class="card" style="width: 18rem;">
+            <img src="images/cruise.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cruise into Timeless Cultures</h5>
+                <a class="AnchorLink AnchorLink--dark PromoTile__Link" tabindex="0" aria-label="Cruise into Timeless Cultures, View River Cruises" href="carousel.html" id="891b8b55-34bb-4f1b-8f3c-bb9badb82710" target="_self"><span class="sr-only">VIEW RIVER CRUISES</span></a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="images/seal1.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">See Iconic Wildlife</h5>
+                <a class="AnchorLink AnchorLink--dark PromoTile__Link" tabindex="0" aria-label="Cruise into Timeless Cultures, View River Cruises" href="carousel.html" id="891b8b55-34bb-4f1b-8f3c-bb9badb82710" target="_self"><span class="sr-only">VIEW EXPEDITION CRUISES</span></a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar on the right side 
+    <div class="sidebar">
+        <strong><h2 style="color: black;">LATEST</h2></strong>
+        <strong><h2 style="color: black;">STORIES</h2></strong>
+
+        <br>
+        <div class="topic">
+            <img src="images/jeffrey-pine-tree-sentinel-dome-yosemite-national-park.jpg" alt="Topic 1 Image">
+            <a href="link1.html">9 travel stories our readers loved in 2023
+            </a>
+
+        </div>
+        <br>
+        <div class="topic">
+            <img src="images/northamerica_GettyImages-82136694_HR.jpg.avif" alt="Topic 2 Image">
+            <a href="link2.html">Combine skiing with a US road trip in the Wasatch Mountains</a>
+        </div>
+        <br>
+        <div class="topic">
+            <img src="images/mta.jpg  " alt="Topic 3 Image">
+            <a href="link3.html">Maritime archaeologist Mensun Bound delves into 30 years of underwater adventures</a>
+        </div>
+        Add more topics as needed -->
+    </div>
+</body>
 </html>
+ 
